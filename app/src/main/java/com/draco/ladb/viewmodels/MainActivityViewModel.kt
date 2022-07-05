@@ -15,8 +15,8 @@ import androidx.preference.PreferenceManager
 import com.draco.ladb.BuildConfig
 import com.draco.ladb.R
 import com.draco.ladb.utils.ADB
-import com.github.javiersantos.piracychecker.PiracyChecker
-import com.github.javiersantos.piracychecker.piracyChecker
+//import com.github.javiersantos.piracychecker.PiracyChecker
+//import com.github.javiersantos.piracychecker.piracyChecker
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
@@ -28,7 +28,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
 
     val isPairing = MutableLiveData<Boolean>()
 
-    private var checker: PiracyChecker? = null
+    //private var checker: PiracyChecker? = null
     private val sharedPreferences = PreferenceManager
         .getDefaultSharedPreferences(application.applicationContext)
 
@@ -53,7 +53,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
      *
      * @param activity Activity to use when showing the error
      */
-    fun piracyCheck(activity: Activity) {
+    /*fun piracyCheck(activity: Activity) {
         if (checker != null || BuildConfig.DEBUG)
             return
 
@@ -70,7 +70,7 @@ class MainActivityViewModel(application: Application) : AndroidViewModel(applica
         val verified = sharedPreferences.getBoolean(context.getString(R.string.pref_key_verified), false)
         if (!verified)
             checker?.start()
-    }
+    }*/
 
     /**
      * Continuously update shell output
